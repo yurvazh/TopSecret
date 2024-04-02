@@ -39,7 +39,8 @@ Project for Python Practice 2024 in MIPT
 
 Стек технологий и используемые библиотеки:
 
-Python 3.11.5
+Разработка: Python 3.11.5
+Поддержка: Python 3
 Модули os, sys
 
 
