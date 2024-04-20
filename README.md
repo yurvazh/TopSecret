@@ -24,23 +24,21 @@ Project for Python Practice 2024 in MIPT
    
       Классы:
    
-      -абстрактный класс BaseCoder с абстрактным методом encode (text, key)
-   
-      -классы VigenereCoder(BaseCoder), VernamCoder(BaseCoder), CaesarCoder(BaseCoder) с переопределенными методами encode,
+      -классы VigenereCoder, VernamCoder, CaesarCoder с методами Code(text, key), с одинаковой сигнатурой для удобства,
            возвращающими текст, закодированный соответствующим способом
    
-      -базовый класс BaseEncoder с абстрактным методом decode (text, key=None) - key должен быть необязательным, на случай выбора автоматической дешифровки
-   
-      -классы VigenerDecoder(BaseDecoder), VernamDecoder(BaseDecoder), CaesarDecoder(BaseDecoder), CaesarAutoDecoder(BaseDecoder) с переопределенными
+      -классы VigenerDecoder, VernamDecoder, CaesarDecode, CaesarAutoDecoder с переопределенными
           соответствующим образом методами decode, возвращающими дешифрованный текст
    
-      -класс Facade с методом RunApp() для выстраивания взаимодействия между пользователем и программой с потенциальной возможностью добавления графического интерфейса. Атрибуты: condition = "start programm"/"encoding"/"decoding"/"programm finished" и code_type = "Caesar"/"Vigener"/"Vernam"
+      -классы LatinAlphabet и CyrillicAlphabet со статическими полями start_lowercase_symbol, start_uppercase_symbol, size и статическим методом contains(symbol), проверяющим что символ принадлежит алфавиту
+   
+      -класс Interface с методом __init__() для выстраивания взаимодействия между пользователем и программой, а также методами run_coding_scenario() и run_decoding_scenario(). Атрибуты: path_for_read, path_for_write - пути до файлов, alphabet - используемый алфавит, code_object, decode_object (в зависимости от сценария), key - ключ для шифровки/дешифровки
 
 
 Стек технологий и используемые библиотеки:
 
 Разработка: Python 3.11.5
 Поддержка: Python 3
-Модули os, sys
+Модули os, sys, pathlib.Path
 
 
