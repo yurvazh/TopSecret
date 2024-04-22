@@ -1,6 +1,5 @@
 from os import system
 from pathlib import Path
-from tkinter import*
 
 from alphabets import LatinAlphabet, CyrillicAlphabet
 from caesar import CaesarCoder, CaesarDecoder, CaesarAutoDecoder
